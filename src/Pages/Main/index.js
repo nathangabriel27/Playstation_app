@@ -51,7 +51,7 @@ export default function Main() {
 
   function navigateToDetailsConsole(params) {
     console.log('cheogu no navigateToDetailsConsole', params);
-   return navigation.navigate('DetailsConsole', params)
+    return navigation.navigate('DetailsConsole', params)
   }
 
 
@@ -90,7 +90,7 @@ export default function Main() {
           />
           <Path
             x={`0`}
-            translateX={`-800`}
+            translateX={`-80`}
             fill="#1b53bf"
             d="M0,288L20,293.3C40,299,80,309,120,293.3C160,277,200,235,240,218.7C280,203,320,213,360,218.7C400,224,440,224,480,197.3C520,171,560,117,600,117.3C640,117,680,171,720,197.3C760,224,800,224,840,192C880,160,920,96,960,64C1000,32,1040,32,1080,37.3C1120,43,1160,53,1200,74.7C1240,96,1280,128,1320,138.7C1360,149,1400,139,1420,133.3L1440,128L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z"
           >
@@ -244,35 +244,39 @@ export default function Main() {
             </TouchableOpacity>
           </View>
           <View style={styles.advertising}>
+            <ScrollView
+            showsVerticalScrollIndicator={false}
+            >
 
-            {advertising.map((advertising, i) => (
-              <TouchableOpacity
-                key={i}
-                activeOpacity={0.9}
-                style={styles.advertisingItem}
-                onPress={() => { console.log('card', advertising) }}
-              >
-                <View style={styles.advertisingItemText}>
-                  <View style={[styles.advertisingTag, { backgroundColor: advertising.colorBackground }]}>
-                    <Text style={styles.advertisingTagText}>{advertising.tag}</Text>
+              {advertising.map((advertising, i) => (
+                <TouchableOpacity
+                  key={i}
+                  activeOpacity={0.9}
+                  style={styles.advertisingItem}
+                  onPress={() => { console.log('card', advertising) }}
+                >
+                  <View style={styles.advertisingItemText}>
+                    <View style={[styles.advertisingTag, { backgroundColor: advertising.colorBackground }]}>
+                      <Text style={styles.advertisingTagText}>{advertising.tag}</Text>
+                    </View>
+                    <Text style={styles.advertisingTitle} numberOfLines={1}>{advertising.title}</Text>
+                    <Text style={styles.advertisingSubTitle} numberOfLines={1}>{advertising.subTitle}</Text>
+
                   </View>
-                  <Text style={styles.advertisingTitle} numberOfLines={1}>{advertising.title}</Text>
-                  <Text style={styles.advertisingSubTitle} numberOfLines={1}>{advertising.subTitle}</Text>
+                  <View style={styles.advertisingItemImage}>
+                    <Image
+                      source={{ uri: advertising.photoGame }}
+                      style={styles.advertisingIcon}
+                      resizeMode={'contain'}
+                    />
+                  </View>
 
-                </View>
-                <View style={styles.advertisingItemImage}>
-                  <Image
-                    source={{ uri: advertising.photoGame }}
-                    style={styles.advertisingIcon}
-                    resizeMode={'contain'}
-                  />
-                </View>
-
-              </TouchableOpacity>
-            ))}
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
           </View>
+
         </View>
-        {/*  </ScrollView> */}
 
       </View>
     </View>
