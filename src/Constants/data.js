@@ -8,7 +8,8 @@ const dataUserProfile = {
 
 const consolesPlaystation = [
   {
-    consoleName: 'Sony Playstation 5 com controle',
+    id:1,
+    consoleName: `Sony Playstation 5 \ncom controle`,
     price: 750,
     uriPhotoCosole: 'https://playstation-app.s3.amazonaws.com/console.png',
     data: {
@@ -20,7 +21,8 @@ const consolesPlaystation = [
     },
   },
   {
-    consoleName: 'Sony Playstation 5',
+    id:2,
+    consoleName: `Sony Playstation 5 \n`,
     price: 500,
     uriPhotoCosole: 'https://playstation-app.s3.amazonaws.com/semcontrole.png',
     data: {
@@ -32,7 +34,8 @@ const consolesPlaystation = [
     },
   },
   {
-    consoleName: 'Sony Playstation 4',
+    id:3,
+    consoleName: `Sony Playstation 4 \n`,
     price: 300,
     uriPhotoCosole: 'https://playstation-app.s3.amazonaws.com/White+PS4+-+20.png',
     data: {
