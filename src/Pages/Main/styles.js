@@ -49,7 +49,7 @@ export default StyleSheet.create({
     marginTop: sizes.medium,
   },
   card: {
-
+    height: 350,
     //backgroundColor: '#fff',
     padding: sizes.medium,
     flexDirection: 'row',
@@ -84,7 +84,7 @@ export default StyleSheet.create({
     position: 'absolute',
     marginTop: 50,
     marginLeft: -20,
-    
+
   },
   cardPriceText: {
     fontFamily: 'Montserrat-Bold',
@@ -138,8 +138,113 @@ export default StyleSheet.create({
 
   },
 
-  footer: {
+  main: {
     flex: 1,
-    backgroundColor: '#ffa'
+    backgroundColor: colors.white,
+    width: width,
+    padding: sizes.small,
+  },
+  mainContainer: {
+    padding: sizes.small,
+    backgroundColor: colors.white,
+    flexDirection: 'row',
+
+  },
+  mainContainerHeader: {
+    flex: 1,
+  },
+  mainContainerTitle: {
+    color: colors.black,
+    margin: sizes.small,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: sizes.title
+  },
+  mainContainerText: {
+    color: colors.black,
+    margin: sizes.small,
+    fontFamily: 'Montserrat-Regular',
+    fontSize: sizes.text
+  },
+  mainButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '25%',
+  },
+  mainButtonText: {
+    color: colors.blueLight3,
+    margin: sizes.small,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: sizes.text
+  },
+
+  advertising: {
+    flex: 1,
+    padding: sizes.small,
+  },
+  advertisingItem: {
+    margin: sizes.small,
+    borderRadius: 8,
+    backgroundColor: colors.white,
+    flexDirection: 'row',
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    
+    elevation: 5,
+
+  },
+  advertisingItemText: {
+    zIndex: 2,
+    width: '70%',
+    //backgroundColor: colors.red,
+    height: '100%',
+    position: 'absolute',
+  },
+  advertisingItemImage: {
+    zIndex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    width: '100%',
+
+  },
+  advertisingTag: {
+
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: sizes.small,
+    margin: sizes.medium,
+    borderRadius: 800,
+  },
+  advertisingTagText: {
+    color: colors.white,
+    margin: sizes.small,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: sizes.subTitle
+  },
+  advertisingTitle: {
+    color: colors.blueLight3,
+    marginHorizontal: sizes.medium,
+    marginTop: sizes.medium,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: sizes.title
+  },
+  advertisingSubTitle: {
+    color: colors.blueLight3,
+    marginHorizontal: sizes.medium,
+    marginTop: sizes.small,
+
+    fontFamily: 'Montserrat-Regular',
+    fontSize: sizes.text
+  },
+  advertisingIcon: {
+    height: 220,
+    width: 220,
+
   },
 })
